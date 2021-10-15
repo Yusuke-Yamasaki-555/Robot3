@@ -51,6 +51,28 @@
 
 吉越
 　・各nodeのpubとsubのやり取りを洗い出す。
+ 　　run.launch(実行するファイル)
+    --manage.py(すべてのpythonファイルの管理を行うpyhonファイル)
+        --bow.py(お辞儀)
+　      --grip.py(棒を持つ)
+            --cv_grip.py(棒を探す)
+        --find.py(物体を探す)
+            --cv_find.py
+        --sprinkle.py(振りかぶる)
+            以下2つの関数はsprinkle.pyに書く. 
+            --not_find()(物体が見つからない)
+            --not_reach()(物体に届かない)                                                                
+        --hit.py(打つ)
+        --check.py(すべて倒したか確認する)
+            --cv_check.py
+        --release.py(棒を離す)
+        --gutspose.py(喜ぶ. ガッツポーズでなくてもよい.)
+
+  ・pubとsubの関係
+    manage.py: pub--OpenCV以外のファイルに指示を出す. sub--OpenCV以外のファイルの動作完了の報告を受け取る.
+    OpenCV以外のファイル: pub--manage.pyに動作完了の報告をする. sub--manage.pyから動作命令を受け取り, 実行する.
+    grip.py等のOpenCVと一緒に動作するファイル: pub--上の動作に加えて, OpenCVファイルへ実行命令を出す. sub--上記の動作に加えて, OpenCVファイルからデータを受け取る. 
+    OpenCVファイル: pub--上のファイルにデータを送る. sub-- 上のファイルから動作命令を受け取り, 実行する.
 　・openCVの、画像から抽出する色をプログラムからスムーズに変更できるか。
  　 :スムーズに変更できた. 動作させるときは一度に2色を抽出させた. これを一色づつ抽出させればよい. 
 　・カメラの映す範囲を調べる。特に縦方向。
