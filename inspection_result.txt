@@ -1,6 +1,7 @@
 ＜検証内容・検証結果＞
 　各検証内容の下に結果(&考察)を記述。
 
+
 山崎
 　・プログラムから目標座標を指定して制御する方法での、座標の単位を調べる。moveit関連。
 　・正確なマニピュレータの制御の方法を検証。SRDFを直接いじる(rvizを活用)か、目標物の座標を直接渡すか。
@@ -9,14 +10,14 @@
 　　　：単位はSI系。meter
 　　　：座標のとり方：x座標＝正面方向(第２関節が動ける方向)、y座標＝表面から見て左方向、ｘ座標＝上方向。右手系
 　　　：
-　　：座標指定
+　　：座標指定(tf)
 　　　：座標指定時の最大座標はほぼ寸法に同じ。寸法より少し小さく見るといい感じ。(詳細は未検証。100mm小さく見れば確実)
 　　　：座標指定で入力０は無効(オイラーは有効)
 　　　：quaternion_from_euler( x軸, y軸, z軸(, スカラ値) )#名前からしてクォータニオンで指定している。ここでハンドの角度をいじる。(入力値はわからん。未検証未勉強)(ライブラリ名：tf.transformations)
 　　　：xyz座標値は記憶される。
 　　　：オイラー角に関しては上書きではなく再定義となる。
 　　　：
-　　：SRDF
+　　：SRDF(Moveit!)
     　：各関節の名前一覧
            crane_x7_shoulder_fixed_part_pan_joint :  z軸第一関節  deg:-170~170
            crane_x7_shoulder_revolute_part_tilt_joint  :  y軸第一関節  deg:-90~90
@@ -27,20 +28,26 @@
            crane_x7_wrist_joint  :  z軸gripper回転  deg:-170~170
       ：すべての関節の値はラジアン。そのまんま与える。
     　：各関節の０°を基準に値を決める。値を上書きしてもその基準からみる。
-    　：
+    　：Moveit!のdocumentationを見るに、Moveit!でも目標座標を指定して自動で逆運動学を計算してくれる機能があるっぽい。
 　・面、構え、礼などの各モーションに対して、自然な動きを検証。愛嬌が出るように。
 　・SRDFで、ひとつだけの関節を指定して数値を送ることは可能か。
 　　　：可能。group_state内で好きな関節を指定して値を送れば良い。ただ、プログラムを走らせたときにWARNがでる。
 　・直前の関節の角度を維持しながら、特定の関節のみイジれるのかどうか。
 　　　：可能。変えたくない関節をgroup_state内で指定しなければいい。
 　・SRDFから読んだデータをプログラム内で置き換えることができるかどうか。
-　　　：
+　　　：可能。ただSRDFを読み込んだ後に値を変更するのではなく、プログラムでモデルの関節名と値を指定して動かす流れになる。
+　　　：（記述例）
+　　　　　　arm.set_joint_value_target({"crane_x7_shoulder_revolute_part_tilt_joint":-0.78539816339745})
+    　　　　arm.go()
+　　　：（関節名定義位置）
+　　　　　　~/catkin_ws/src/crane_x7_ros/crane_x7_description/urdf/crane_x7_arm.xacro
 　・nodeの勉強
 
 　・印や棒のURDFの作成及び適用。URDFの書き方から学ぶ。gazeboの方でGUIから作れるならそれで。(~中間発表までには用意)
-　　　：まだ手は付けていない。(いいサイト： joe.ash.jp/program/ros/urdf_model/index.htm )
+　　　：まだ手は付けていない。
 　　　：
 　　　：
+
 
 吉越
 　・各nodeのpubとsubのやり取りを洗い出す。
@@ -64,3 +71,13 @@
 　・どのような印の形が良いか決める。ここを面白くする。
 
 　・印や棒のURDFの作成及び適用。URDFの書き方から学ぶ。gazeboの方でGUIから作れるならそれで。(~中間発表までには用意)
+
+
+追加検証
+　・Moveit!で目標指定から逆運動学でアームを動かす方法の確立。
+
+
+
+＜いいサイトまとめ＞
+・Moveit!のまとめ：https://robo-marc.github.io/moveit_documents/index.html
+・URDFのいいサイト：joe.ash.jp/program/ros/urdf_model/index.htm
