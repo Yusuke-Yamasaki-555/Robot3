@@ -6,17 +6,32 @@
 最終発表　12/20 
 
 〜中間発表(10/25)
+・山崎：α：モーション(SRDFファイル & 目標座標指定)(事前に決めておく)
+・山崎、吉越：α：URDFの勉強
 
-〜中間審査(11/15)
+〜中間審査(11/15)＝８ｈ
+１＿α：シュミレーション用モデル(URDF)の作成（一番最初。最初の１週間以内に）
+２＿2：launchファイル書き換え（モデル作成後）
+３＿12-6：grip.py & cv_grip.py（６：コード書き）
+４＿2：release.py
+６＿2：bow.py
+７＿2：hit.py
+Last＿2：中間審査資料作成　　　　　計：１６ｈ
 
-〜最終発表(12/20)
+〜最終発表(12/20)＝１６ｈ
+１＿2：gutspose.py
+２＿12-6：grip.py & cv_grip.py（６：検証＆微調整）
+３＿8：find.py & cv_find.py（２：コード書き(gripからコピペ)、６：検証＆微調整）
+４＿4：check.py & cv_check.py（）
+５＿6：manage.py（２：コード書き、４：調整時間）
+Last＿6：README.mdの作成。最終発表資料作成　　　　　　　計：３２ｈ
+
 
 ＜作成物一覧＞
- 　　run.launch(実行するファイル)
     --manage.py(すべてのpythonファイルの管理を行うpyhonファイル)
         --bow.py(お辞儀)
 　      --grip.py(棒を持つ)
-            --cv_grip.py(棒を探す)
+            --cv_grip.py(棒を探す、微調整する)
         --find.py(物体を探す)
             --cv_find.py
         --sprinkle.py(振りかぶる)
@@ -24,28 +39,30 @@
             --not_find()(物体が見つからない)
             --not_reach()(物体に届かない)                                                                
         --hit.py(打つ)
-        --check.py(すべて倒したか確認する)
+        --check.py(指定の印が倒れたか確認する。すべて倒したか確認する)
             --cv_check.py
         --release.py(棒を離す)
         --gutspose.py(喜ぶ. ガッツポーズでなくてもよい.)
-
-    モーション(SRDFファイル & 目標座標指定)
-
-    シュミレーション用モデル(URDF)
-
-＜工数予測：日数＞
- 　 run.launch
-    manage.py
-    bow.py
-　  grip.py
-    cv_grip.py
-    find.py
-    cv_find.py
-    sprinkle.py
-    hit.py
-    check.py
-    cv_check.py
-    release.py
-    gutspose.py
     モーション(SRDFファイル & 目標座標指定)
     シュミレーション用モデル(URDF)
+    launchファイルの書き換え
+    README.mdの作成
+
+
+＜工数予測：時間数(48時間＋α)＞
+    6：manage.py（２：コード書き、４：調整時間）
+    2：bow.py
+　  12：grip.py & cv_grip.py（６：コード書き、６：検証＆微調整）
+    8：find.py & cv_find.py（２：コード書き(gripからコピペ)、６：検証＆微調整）
+    6：sprinkle.py
+    2：hit.py
+    4：check.py & cv_check.py（）
+    2：release.py
+    2：gutspose.py
+    　α：モーション(SRDFファイル & 目標座標指定)(事前に決めておく)
+    　α：シュミレーション用モデル(URDF)
+    2：launchファイル書き換え
+    6：README.mdの作成。最終発表資料作成
+    2：中間審査資料作成
+
+合計時間：48時間＋α
