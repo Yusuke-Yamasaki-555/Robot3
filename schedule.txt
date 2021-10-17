@@ -10,21 +10,23 @@
 ・山崎、吉越：α：URDFの勉強
 
 〜中間審査(11/15)＝８ｈ
-１＿α：シュミレーション用モデル(URDF)の作成（一番最初。最初の１週間以内に）
-２＿2：launchファイル書き換え（モデル作成後）
-３＿12-6：grip.py & cv_grip.py（６：コード書き）
-４＿2：release.py
-６＿2：bow.py
-７＿2：hit.py
-Last＿2：中間審査資料作成　　　　　計：１６ｈ
+１＿吉越：α：シュミレーション用モデル(URDF)の作成（棒）
+１＿山崎：α：シュミレーション用モデル(URDF)の作成（印）
+２＿吉越：2：launchファイル書き換え（モデル作成後）
+３＿吉越：12-6：grip.py & cv_grip.py（４：コード書き）
+４＿山崎：2：release.py
+６＿山崎：2：bow.py
+７＿山崎：2：hit.py
+Last＿山崎：2：中間審査資料作成　　　　　計：１４ｈ
 
 〜最終発表(12/20)＝１６ｈ
-１＿2：gutspose.py
-２＿12-6：grip.py & cv_grip.py（６：検証＆微調整）
-３＿8：find.py & cv_find.py（２：コード書き(gripからコピペ)、６：検証＆微調整）
-４＿4：check.py & cv_check.py（）
-５＿6：manage.py（２：コード書き、４：調整時間）
-Last＿6：README.mdの作成。最終発表資料作成　　　　　　　計：３２ｈ
+１＿山崎：2：gutspose.py
+２＿吉越：12-6：grip.py & cv_grip.py（６：検証＆微調整）
+３＿吉越：8：find.py & cv_find.py（２：コード書き(gripからコピペ)、６：検証＆微調整）
+４＿吉越：4：check.py & cv_check.py（）
+５＿山崎：6：sprinkle.py
+６＿山崎(コード書き)、吉越6：manage.py（２：コード書き、４：調整時間）
+Last＿山崎：6：README.mdの作成。最終発表資料作成　　　　　　　計：３８ｈ
 
 
 ＜作成物一覧＞
@@ -52,17 +54,17 @@ Last＿6：README.mdの作成。最終発表資料作成　　　　　　　計
 ＜工数予測：時間数(48時間＋α)＞
     6：manage.py（２：コード書き、４：調整時間）
     2：bow.py
-　  12：grip.py & cv_grip.py（６：コード書き、６：検証＆微調整）
+　  12：grip.py & cv_grip.py（４：コード書き、６：検証＆微調整）
     8：find.py & cv_find.py（２：コード書き(gripからコピペ)、６：検証＆微調整）
     6：sprinkle.py
     2：hit.py
     4：check.py & cv_check.py（）
     2：release.py
     2：gutspose.py
-    　α：モーション(SRDFファイル & 目標座標指定)(事前に決めておく)
-    　α：シュミレーション用モデル(URDF)
+    α：モーション(SRDFファイル & 目標座標指定)(事前に決めておく)
+    α：シュミレーション用モデル(URDF)
     2：launchファイル書き換え
     6：README.mdの作成。最終発表資料作成
     2：中間審査資料作成
 
-合計時間：48時間＋α
+合計時間：５２時間＋α
