@@ -15,18 +15,17 @@
 ２＿吉越：2：launchファイル書き換え（モデル作成後）
 ３＿吉越：12-6：grip.py & cv_grip.py（４：コード書き）
 ４＿山崎：2：release.py
-６＿山崎：2：bow.py
-７＿山崎：2：hit.py
-Last＿山崎：2：中間審査資料作成　　　　　計：１４ｈ
+５＿山崎：2：hit.py
+Last＿山崎：2：中間審査資料作成　　　　　計：１２ｈ＋α
 
 〜最終発表(12/20)＝１６ｈ
-１＿山崎：2：gutspose.py
+１＿山崎：4：emotions.py
 ２＿吉越：12-6：grip.py & cv_grip.py（６：検証＆微調整）
 ３＿吉越：8：find.py & cv_find.py（２：コード書き(gripからコピペ)、６：検証＆微調整）
 ４＿吉越：4：check.py & cv_check.py（）
 ５＿山崎：6：sprinkle.py
 ６＿山崎(コード書き)、吉越6：manage.py（２：コード書き、４：調整時間）
-Last＿山崎：6：README.mdの作成。最終発表資料作成　　　　　　　計：３８ｈ
+Last＿山崎：6：README.mdの作成。最終発表資料作成　　　　　　　計：４０ｈ
 
 
 ＜作成物一覧＞
