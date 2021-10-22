@@ -13,3 +13,30 @@ nodeを分ける
 node間の通信方法
 Pub-Sub, serviceのどちらか
 Pub-Subが一般的
+
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+山崎
+
+＜変更案＞
+
+☆manage _ 動作処理 _ 画像処理 _ emotions の３つのnodeに分ける。
+　manage.py : client ( actionlib , service )＝main
+   - srdf-only : sever ( service )＝srdfのみでの動作指定
+   - motion-process ( move-only ) : server ( actionlib )＝ある程度の処理を含んだ動作指定
+   - motion-process ( img & move ) : server ( actionlib ) & client ( service )＝画像処理を用いた動作指定
+      - img-process : server ( service )
+
+検証＿一つのプログラムからいくつもserverの口を作れるか
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+＝＝＝＝＝
+＝actionlibはserviceの強化版。serviceだとserver側の処理完了をclient側は待つことになる。server側の処理が重いとclient側の処理が止まってしまう。
+＝　actionlibでは、server側の処理の経過状況がclient側で分かる為、一つ一つの行動がうまくいっているかの確認が出来る。client側でも処理が出来る状態になる。
+＝＝＝＝＝
+
+actionlibで関数群を各nodeとして分けてもいいかも。
+ただsrdfを読むだけの処理なら、serviceで実装してもいいかも。
+この場合、launchファイルだとかで事前にserver側のnodeを全て立ち上げる必要がある。
+
+pub, sub は論外。動作は流れで実行しなければならないから、非同期は無理。画像処理も、引数があってその結果から動作をしないとならないから非同期は無理。
