@@ -15,11 +15,11 @@ Pub-Sub, serviceのどちらか
 Pub-Subが一般的
 <検証>
 Pub, Subを使った同期処理
-結果: 成功。
+結果: 成功
 
 <検証>
 同一プログラム内でのserverの複製
-結果: 
+結果: 可能
 
 <検証>
 service(actionlib)を使った処理
