@@ -18,3 +18,18 @@ img_process
 　印を確認する
 
 manage
+
+
+
+Service Action name  memo
+
+node:emotions:service
+　一礼：E-bow、首を傾げる：E-tilt_neck、嫌がる：E-dislike、喜ぶ(棒発見時)：E-happy_club、喜ぶ(終了時)：E-happy_end
+node:manage:subscrive&client
+node:motion_process:server&client:
+　:service
+　　棒を離す：M-release_club
+　:action
+　　棒を振り、打つ：M-swing_club、棒を探す：M-seach_club、印を探す：M-seach_target、印を確認する：M-check_target
+node:img_process:server:action
+　棒を探す：I-seach_club、印を探す：I-seach_target、印を確認する：I-check_target
