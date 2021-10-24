@@ -1,0 +1,20 @@
+emotins
+　礼
+　首を傾げる
+　嫌がる
+　喜ぶ(棒発見)
+　喜ぶ(last)
+
+motion_process
+　棒を離す
+　棒を掴む
+　棒を振る
+　印を探す
+　印を確認する
+
+img_process
+　棒を探す
+　印を探す
+　印を確認する
+
+manage
