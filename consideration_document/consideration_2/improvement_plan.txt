@@ -18,3 +18,4 @@
 ＜目標案＞
 　　file：４班_居合斬りロボットの開発_20211025.pdf
 　　　img_process~motion_process間の通信をserviceで実装。（代替案のpub sub をserviceに置き換える）
+  (画像認識をマスクして行うか、ARマーカーを使うか検討)
